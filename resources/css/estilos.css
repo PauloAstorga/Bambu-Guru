@@ -8,7 +8,7 @@
     --header-height: 3rem;
 
     /*Colores*/
-    --hue-color: 150;
+    --hue-color: 132;
 
     /*Modo de colores*/
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -146,7 +146,7 @@ img {
 .header {
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
@@ -186,7 +186,7 @@ img {
 @media screen and (max-width: 767px) {
     .nav__menu {
         position: fixed;
-        bottom: -100%;
+        top: -100%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);
@@ -236,7 +236,7 @@ img {
 
 /*Mostrar menu*/
 .show-menu {
-    bottom: 0;
+    top: 0;
 }
 
 /*-----*/
