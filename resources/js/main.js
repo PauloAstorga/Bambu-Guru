@@ -82,6 +82,7 @@ const missionContent = document.getElementsByClassName('mission__content')
 function toggleMission(){
     let itemClass = this.parentNode.className
 
+    /*Recorre el arreglo de elementos de mission content y asigna open o close segun corresponda*/
     for (i = 0; i < missionContent.length ; i++){
         missionContent[i].className = 'mission__content mission__close'
     }
@@ -93,6 +94,12 @@ function toggleMission(){
 missionHeader.forEach( (el) => {
     el.addEventListener('click', toggleMission)
 })
+
+
+/*-----*/
+
+/*Login form create etc*/
+
 
 
 /*-----*/

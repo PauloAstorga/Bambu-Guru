@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/bambu.ico" />
 
+    <!--JQuery y JQuery UI para desplegar el calendario-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!---->
+
     <title>Bambú Gurú</title>
 </head>
 <body>
@@ -20,37 +26,37 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">
+                        <a href="../index.html#home" class="nav__link">
                             <i class="uil uil-home nav__icon"></i> Home
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                        <a href="../index.html#about" class="nav__link">
                             <i class="uil uil-user nav__icon"></i> Sobre Nosotros
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#mission" class="nav__link">
+                        <a href="../index.html#mission" class="nav__link">
                             <i class="uil uil-books nav__icon"></i> Nuestra mision
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">
+                        <a href="../index.html#contact" class="nav__link">
                             <i class="uil uil-calling nav__icon"></i> Contactenos
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="WEB/eventos.html" class="nav__link">
                             <i class="uil uil-calendar-alt nav__icon"></i> Eventos
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">
+                        <a href="WEB/login.html" class="nav__link">
                             <i class="uil uil-signin nav__icon"></i> Login
                         </a>
                     </li>
@@ -70,27 +76,39 @@
         </nav>
     </header>
 
-    
+    <main class="main">
+        <section class="event section" id="event">
+            <div class="calendar__section" id="calendar">
+
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
                     <h1 class="footer__title">Bambu Guru</h1>
-                    <span class="footer__subtitle">Subtitulo pendiente</span>
+                    <span class="footer__subtitle">¡Preservar, prevenir y concientizar!</span>
                 </div>
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#" class="footer__link">Link 1</a>
+                        <a href="#" class="footer__link">Nuestra Aplicación
+                            <i class="uil uil-google-play"></i>
+                        </a> 
                     </li>
 
                     <li>
-                        <a href="#" class="footer__link">Link 2</a>
+                        <a href="#" class="footer__link">Política de Privacidad
+                            <i class="uil uil-file-shield-alt"></i>
+                        </a>
                     </li>
 
                     <li>
-                        <a href="#" class="footer__link">Link 3</a>
+                        <a href="#" class="footer__link">Objetivos de la FUDESO con la ONU
+                            <i class="uil uil-flower"></i>
+                        </a>
                     </li>
                 </ul>
 
@@ -113,12 +131,8 @@
         </div>
     </footer>
 
-    <!-- Scroll up-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-
-    <script src="resources/js/main.js"></script>
+    <script src="../resources/js/main.js"></script>
+    <script src="../resources/js/event.js"></script>
 
 </body>
 </html>

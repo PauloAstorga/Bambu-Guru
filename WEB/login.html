@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="../resources/css/estiloslogin.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/estilos.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/bambu.ico" />
@@ -13,65 +13,167 @@
     <title>Bambú Gurú</title>
 </head>
 <body>
-    <main>
-        <div class="cod-container">
-            <div class="form-header">
-            <img src="../resources/img/panda-logo.jpg"class="img">
-            <h1>Bambú-Guru</h1>
+    
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Bambu Guru</a>
+            <!--===Menu===-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="../index.html#home" class="nav__link">
+                            <i class="uil uil-home nav__icon"></i> Home
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="../index.html#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> Sobre Nosotros
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="../index.html#mission" class="nav__link">
+                            <i class="uil uil-books nav__icon"></i> Nuestra mision
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="../index.html#contact" class="nav__link">
+                            <i class="uil uil-calling nav__icon"></i> Contactenos
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="WEB/eventos.html" class="nav__link">
+                            <i class="uil uil-calendar-alt nav__icon"></i> Eventos
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="WEB/login.html" class="nav__link">
+                            <i class="uil uil-signin nav__icon"></i> Login
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>                
             </div>
-        
-            <div class="form-content">
-            <form action="#" class="cod-form">
-                <div class="form-title">
-                    <h3>Iniciar Sesion</h3>
+
+            <div class="nav__btns">
+                <!-- Modo Oscuro-->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-list-ul"></i>
                 </div>
-                <div class="input-group">
-                    <input type="email" name="form-input" id="correo" class="form-input">
-                    <label class="label " for="correo" >Correo</label>
-                </div>
-                <div class="input-group">
-                    <input type="password" name="form-input" id="pass" class="form-input">
-                    <label class="label" for="pass" >Contraseña</label>
-                </div>
-                <div class="input-group">
-                    <input type="submit" class="form-input" value="Iniciar Sesion"><br>
-                    <p> <a href="#" class="alt-form">Crear cuenta</a> </p>
-                    <p><a href="#">Olvido su contraseña</a></p>
-                    </div>
-                </form>
             </div>
-            <div class="form-content">
-                <form action="#" class="cod-form">
-                    <div class="form-title">
-                        <h3>Crear Cuenta</h3>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" name="form-input" id="usuario" class="form-input">
-                        <label class="label " for="usuario" >User</label>
-                    </div>
-                    
-                    <div class="input-group">
-                        <input type="email" name="form-input" id="correo" class="form-input">
-                        <label class="label " for="reg-correo" >Correo</label>
-                    </div>
-                    
-                    <div class="input-group">
-                        <input type="password" name="form-input" id="pass" class="form-input">
-                        <label class="label" for="reg-pass" >Contraseña</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" name="form-input" id="pass" class="form-input">
-                        <label class="label" for="reg-rep-pass" >Repetir contraseña</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="submit" class="form-input" value="Crear Cuenta"><br>
+
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!--===Login===-->
+        <section class="login section" id="login">
+            <h2 class="section__title">Conéctate con tu cuenta</h2>
+            <span class="section__subtitle">O registra una en caso de no tener</span>
+
+            <div class="login__container container grid">
+                <div class="login__center"><!--Si, contact__form, para reutilizar código :D-->
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="login__content">
+                                <label for="" class="contact__label">Usuario</label>
+                                <input type="text" class="contact__input" placeholder="mail@example.com">
+                            </div>
+    
+                            <div class="login__content">
+                                <label for="" class="contact__label">Contraseña</label>
+                                <input type="email" class="contact__input" placeholder="**********">
+                            </div>
                         </div>
+                        
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Conectarse
+                                <i class="uil uil-sign-in-alt button__icon"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#" class="login__link">
+                                ¿Olvidó su contraseña?
+                            </a>
+                            <br>
+                            <a href="#" class="login__link">
+                                ¡Registrate!
+                            </a>
+                        </div>
+                        
                     </form>
+
+                    <div class="login__recover">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptatum repellendus laboriosam animi velit optio obcaecati illum asperiores eveniet ipsa? Vel necessitatibus obcaecati molestias ipsa ipsam iusto hic, modi assumenda eos, aliquam neque sit possimus alias non aliquid culpa voluptas explicabo cumque qui. Alias sapiente beatae dolorem repellendus. Doloribus, distinctio.
+                    </div>
+
+                    <div class="login__create">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ab nostrum dolore? Placeat laudantium, tempora enim error doloremque nemo nihil quo aspernatur, amet soluta at sunt? Dicta libero non alias, nostrum rem reprehenderit accusantium esse. Et nisi consectetur voluptas temporibus sapiente dolores accusamus consequatur ut, voluptatibus voluptatem tenetur sed quibusdam.
+                    </div>
                 </div>
-        </div>
+            </div>
+        </section>
 
     </main>
-    <script src="../resources/js/jquery-3.6.0.min.js"></script>
-    <script src="../resources/js/form.js"></script>
+
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Bambu Guru</h1>
+                    <span class="footer__subtitle">¡Preservar, prevenir y concientizar!</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Nuestra Aplicación
+                            <i class="uil uil-google-play"></i>
+                        </a> 
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Política de Privacidad
+                            <i class="uil uil-file-shield-alt"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Objetivos de la FUDESO con la ONU
+                            <i class="uil uil-flower"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="#" class="footer__social" target="_blank">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer__social" target="_blank">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer__social" target="_blank">
+                        <i class="uil uil-twitter-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copyright">&#169; Bambu Guru. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="../resources/js/main.js"></script>
 </body>
 </html>
