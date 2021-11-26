@@ -8,10 +8,10 @@
     --header-height: 3rem;
 
     /*Colores*/
-    --hue-color: 350;
+    --hue-color: 90;
 
     /*Modo de colores*/
-    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color: hsl(var(--hue-color), 65%, 45%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -459,7 +459,7 @@ body.dark-theme {
 }
 
 .meta__4 {
-    width: 50%;
+    width: 10%;
 }
 
 .meta__5 {
@@ -467,7 +467,7 @@ body.dark-theme {
 }
 
 .meta__6 {
-    width: 60%;
+    width: 15%;
 }
 
 .mission__list {
@@ -743,6 +743,7 @@ body.dark-theme {
     .header {
         top: 0;
         bottom: initial;
+        background-color: var(--first-color-second);
     }
 
     .header,.main,.footer__container {
@@ -832,6 +833,26 @@ body.dark-theme {
     .footer__copyright {
         margin-top: 4.5rem;
     }
+}
+
+/*-----*/
+
+/*Login*/
+
+.login__label {
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+}
+
+.login__input {
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: .25rem .5rem .5rem 0;
 }
 
 /*-----*/
