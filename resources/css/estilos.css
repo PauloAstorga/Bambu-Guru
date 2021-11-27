@@ -19,7 +19,7 @@
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --body-color: hsl(var(--hue-color), 60%, 85%);
     --container-color: #FFF;
 
     /*Fuente y tipografia*/
@@ -876,6 +876,29 @@ body.dark-theme {
     overflow: hidden;
 }
 
+
+#login-forgot {
+    display: none;
+}
+
+#login-create {
+    display: none;
+}
+
+form {
+    margin-bottom: var(--mb-2-5);
+}
+
+.active{
+    top: -14px;
+    font-size: 12px;
+    color: #7CB324;
+
+}
+.error{
+    color: red;
+
+}
 /*-----*/
 
 /*Calendar*/

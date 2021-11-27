@@ -7,6 +7,7 @@
 
     <link href="../resources/css/estilos.css" rel="stylesheet" type="text/css">
 
+    <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/bambu.ico" />
 
@@ -80,16 +81,16 @@
 
             <div class="login__container container grid">
                 <div class="login__center"><!--Si, contact__form, para reutilizar código :D-->
-                    <form action="" class="contact__form grid">
+                    <form action="" id="login-user" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="login__content">
                                 <label for="" class="contact__label">Usuario</label>
-                                <input type="email" class="contact__input" placeholder="mail@example.com">
+                                <input type="email" name="user-input" class="contact__input" placeholder="mail@example.com">
                             </div>
     
                             <div class="login__content">
                                 <label for="" class="contact__label">Contraseña</label>
-                                <input type="password" class="contact__input" placeholder="**********">
+                                <input type="password" name="user-input" class="contact__input" placeholder="**********">
                             </div>
                         </div>
                         
@@ -101,24 +102,86 @@
                         </div>
 
                         <div>
-                            <a href="#" class="login__link">
+                            <a href="#" onclick="registerM()" id="forgot-pwd" class="login__link">
                                 ¿Olvidó su contraseña?
                             </a>
                             <br>
-                            <a href="#" class="login__link">
+                            <a href="#" onclick="createM()" id="register" class="login__link">
                                 ¡Registrate!
                             </a>
                         </div>
                         
                     </form>
 
-                    <div class="login__recover">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt voluptatum repellendus laboriosam animi velit optio obcaecati illum asperiores eveniet ipsa? Vel necessitatibus obcaecati molestias ipsa ipsam iusto hic, modi assumenda eos, aliquam neque sit possimus alias non aliquid culpa voluptas explicabo cumque qui. Alias sapiente beatae dolorem repellendus. Doloribus, distinctio.
-                    </div>
+                    <form action="" id="login-forgot" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="login__content">
+                                <label for="" class="contact__label">Usuario</label>
+                                <input type="email" name="user-input" class="contact__input" placeholder="mail@example.com">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <a href="#" onclick="alertMail()" class="button button--flex">
+                                Enviar Correo
+                                <i class="uil uil-sign-in-alt button__icon"></i>
+                            </a>
+                            
+                        </div>
 
-                    <div class="login__create">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit ab nostrum dolore? Placeat laudantium, tempora enim error doloremque nemo nihil quo aspernatur, amet soluta at sunt? Dicta libero non alias, nostrum rem reprehenderit accusantium esse. Et nisi consectetur voluptas temporibus sapiente dolores accusamus consequatur ut, voluptatibus voluptatem tenetur sed quibusdam.
-                    </div>
+                        <div>
+                            <a href="#" onclick="backLog()" class="button button--flex">Back
+                                <i class="uil uil-arrow-circle-left button__icon"></i>
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                    <form action="" id="login-create" class="contact-_form grid">
+                        <div class="contact__inputs grid">
+
+                            <div class="login__content">
+                                <label for="" class="contact__label">Rut</label>
+                                <input type="text" name="user-input" class="contact__input" placeholder="Sin puntos y con guion">
+                            </div>
+
+                            <div class="login__content">
+                                <label for="" class="contact__label">Correo Electronico</label>
+                                <input type="email" name="user-input" class="contact__input" placeholder="mail@example.com">
+                            </div>
+    
+                            <div class="login__content">
+                                <label for="" class="contact__label">Contraseña</label>
+                                <input type="password" name="user-input" class="contact__input" placeholder="**********">
+                            </div>
+
+                            <div class="login__content">
+                                <label for="" class="contact__label">Edad</label>
+                                <input type="number" name="user-input" class="contact__input" placeholder="Edad">
+                            </div>
+
+                            <div class="login__content">
+                                <label for="" class="contact__label">País</label>
+                                <input type="text" name="user-input" class="contact__input" placeholder="Pais">
+                            </div>
+
+                        </div>
+                        
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Registrarse
+                                <i class="uil uil-sign-in-alt button__icon"></i>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#" onclick="backLog()" class="button button--flex">Back
+                                <i class="uil uil-arrow-circle-left button__icon"></i>
+                            </a>
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -175,5 +238,6 @@
     
 
     <script src="../resources/js/main.js"></script>
+    <script src="../resources/js/form.js"></script>
 </body>
 </html>

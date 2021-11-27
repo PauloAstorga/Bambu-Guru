@@ -71,7 +71,6 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme() )
     localStorage.setItem('selected-icon', getCurrentIcon() )
 })
-
 /*-----*/
 
 /*Acordeon de mision y objetivos*/
@@ -98,8 +97,69 @@ missionHeader.forEach( (el) => {
 
 /*-----*/
 
-/*Login form create etc*/
+/*Color Picker*/
+/*Just for fun, le cambia el color a toda la página*/
+function getColorPicker(){
 
+    var color = document.getElementById('colorcito').value;
+    var r = parseInt(color.substr(1,2), 16); // Grab the hex representation of red (chars 1-2) and convert to decimal (base 10).
+    var g = parseInt(color.substr(3,2), 16);
+    var b = parseInt(color.substr(5,2), 16);
 
+    function rgbToHsl(r, g, b){
+    
+        r /= 255, g /= 255, b /= 255;
+        var max = Math.max(r, g, b), min = Math.min(r, g, b);
+        var h, s, l = (max + min) / 2;
+    
+        if(max == min){
+            h = s = 0; // achromatic
+        }else{
+            var d = max - min;
+            s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+            switch(max){
+                case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                case g: h = (b - r) / d + 2; break;
+                case b: h = (r - g) / d + 4; break;
+            }
+            h /= 6;
+        }
+    
+        return [h, s, l];
+    }
+    var hue = rgbToHsl(r, g, b)[0] * 360;
+    var r = document.querySelector(':root');
+    r.style.setProperty('--hue-color',hue)
+    
+}
+/*-----*/
 
+function alertMail(){
+    alert("Revise la bandeja de entrada de su correo para validar su identidad.")
+}
+
+/*Login (para este punto las animaciones eran lo de menos)*/
+const logUser = document.getElementById('login-user');
+        recoverPwd = document.getElementById('login-forgot');
+        createUser = document.getElementById('login-create');
+
+function registerM(){
+    logUser.style.display = 'none';
+    createUser.style.display = 'none';
+    recoverPwd.style.display = 'grid';
+}
+
+function createM(){
+    logUser.style.display = 'none';
+    recoverPwd.style.display = 'none';
+    createUser.style.display = 'grid';
+    const localAux = document.getElementsByClassName('login__center')
+    localAux.style.height = '10px';
+}
+
+function backLog(){
+    recoverPwd.style.display = 'none';
+    createUser.style.display = 'none';
+    logUser.style.display = 'grid';
+}
 /*-----*/
